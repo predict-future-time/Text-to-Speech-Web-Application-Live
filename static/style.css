@@ -1,0 +1,90 @@
+/* === Global Styles === */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    text-align: center;
+    padding: 2rem;
+    color: #333;
+}
+
+/* === Centered White Card Container === */
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 400px;
+}
+
+/* === Title and Subtitle Styling === */
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* === Upload Form Styling === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Space between form elements */
+}
+
+/* === Input Fields and Dropdowns === */
+input, select, button {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* === Submit Button Style === */
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* === Spinner Styling (shown during processing) === */
+#spinner {
+    margin-top: 1rem;
+}
+
+/* === Class to hide elements (e.g., spinner) === */
+.hidden {
+    display: none;
+}
+
+/* === Download Button Section === */
+.download-section {
+    margin-top: 1.5rem;
+}
+
+/* === Download Link Styling === */
+a {
+    font-size: 1.1rem;
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === Note / Help Text Styling === */
+.note {
+    font-size: 0.85rem;
+    color: #888;
+}

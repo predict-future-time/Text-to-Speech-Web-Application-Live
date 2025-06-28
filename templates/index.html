@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word/PDF to MP3 Converter</title>
+
+    <!-- Link to custom CSS in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Main title and subtitle for user guidance -->
+        <h1>📄 Word/PDF to 🎧 MP3 Audio Converter</h1>
+        <p class="subtitle">
+            Upload a Word or PDF document and convert it into a downloadable MP3 audio file.
+        </p>
+
+        <!-- Upload form with file and configuration options -->
+        <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+
+            <!-- File upload input for PDF or DOCX -->
+            <label>Select File (PDF or DOCX):</label>
+            <input type="file" name="file" accept=".pdf,.docx" required>
+
+            <!-- Input language dropdown (default set to English) -->
+            <label>Input Language:</label>
+            <select name="input_lang">
+                <option value="en" selected>English</option>
+            </select>
+
+            <!-- Output language dropdown (default set to English) -->
+            <label>Output Language:</label>
+            <select name="output_lang">
+                <option value="en" selected>English</option>
+            </select>
+
+            <!-- Voice selection dropdown (default option only for now) -->
+            <label>AI Voice:</label>
+            <select name="voice_name">
+                <option value="default" selected>Default Voice</option>
+            </select>
+
+            <!-- File size info -->
+            <p class="note">📌 Max file size: 5MB</p>
+
+            <!-- Submit button -->
+            <button type="submit">Convert to MP3</button>
+        </form>
+
+        <!-- Spinner shown while conversion is happening -->
+        <div id="spinner" class="hidden">
+            <img src="{{ url_for('static', filename='spinner.gif') }}" alt="Loading...">
+            <p>Processing... Please wait</p>
+        </div>
+
+        <!-- Download link shown only after conversion -->
+        {% if audio_url %}
+        <div class="download-section">
+            <a href="{{ audio_url }}">⬇ Download MP3</a>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <!-- Simple JS to show the spinner when form is submitted -->
+    <script>
+        const form = document.getElementById('uploadForm');
+        form.addEventListener('submit', () => {
+            document.getElementById('spinner').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
