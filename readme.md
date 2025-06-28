@@ -1,8 +1,8 @@
 # 🌐 Live Demo
 
-Access the deployed application here: [http://<your-ec2-ip>:5000](http://<your-ec2-ip>:5000)
+Access the deployed application here: [http://3.92.38.82:5000](http://3.92.38.82:5000)
 
-> ⚠️ Replace `<your-ec2-ip>` with your actual EC2 Public IPv4 address.
+> ⚙️ Hosted on Amazon EC2 (Free Tier) using Docker & GitHub Actions
 
 ---
 
@@ -13,6 +13,17 @@ This is a Flask-based web application that allows users to upload PDF or DOCX fi
 > This project is fully containerized with Docker, deployed on AWS EC2, and supports GitHub Actions-based CI/CD.
 
 ---
+
+# 🌟 Author
+
+**Ashutosh Dash**
+
+> Connect with me on [LinkedIn](https://www.linkedin.com/in/your-link) | [GitHub](https://github.com/yourusername)
+
+If you found this project helpful, feel free to ⭐ star the repo!
+
+---
+
 
 ## 🚀 Features
 
@@ -207,16 +218,6 @@ jobs:
 * Add user authentication
 * Upload history dashboard
 * Frontend enhancements using React or Tailwind CSS
-
----
-
-## 🌟 Author
-
-**Ashutosh Dash**
-
-> Connect with me on [LinkedIn](https://www.linkedin.com/in/your-link) | [GitHub](https://github.com/yourusername)
-
-If you found this project helpful, feel free to ⭐ star the repo!
 
 ---
 
